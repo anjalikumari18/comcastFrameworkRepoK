@@ -9,7 +9,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import WebDriverUtility.WebDriverUtility;
+import generic.webDriverUtility.WebDriverUtility;
+
+//import WebDriverUtility.WebDriverUtility;
 
 public class HomePage {
 	
@@ -83,7 +85,7 @@ public class HomePage {
 	
 	public void logout() {
 		WebDriverUtility wutil= new WebDriverUtility();
-		wutil.waitForVisibilityOfWebelement(driver,userIcon );
+		wutil.waitForElementPresent(driver,userIcon );
 		Actions action = new Actions(driver);
 		action.moveToElement(userIcon).click().perform();
 		action.moveToElement(logoutbtn).click(logoutbtn).perform();
