@@ -82,6 +82,7 @@ public class createLeadWithCampaign {
 		ldp.getPhonetf().sendKeys(phoneno+r);
 		ldp.getRating().sendKeys(rating+r);
 		ldp.getAddCpgnBtn().click();
+		
         wutil.switchNewBrowserTab(driver);	
         ldp.getSelectbtn().click();
         wutil.switchToParent(driver);

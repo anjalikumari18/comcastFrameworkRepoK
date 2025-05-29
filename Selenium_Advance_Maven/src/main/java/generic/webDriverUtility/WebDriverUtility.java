@@ -70,8 +70,6 @@ public class WebDriverUtility {
 		child.remove(parent);
 		for(String window:child) {
 			driver.switchTo().window(window);
-			
-			
 			}
 		}
     

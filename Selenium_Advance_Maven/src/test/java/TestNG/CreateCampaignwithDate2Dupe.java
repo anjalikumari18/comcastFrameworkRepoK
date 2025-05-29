@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
@@ -21,12 +22,13 @@ import generic.fileutility.PropertyFileutility;
 import generic.webDriverUtility.JavaUtility;
 import generic.webDriverUtility.UtilityClassObject;
 import generic.webDriverUtility.WebDriverUtility;
-
+//@Listeners(ListnerImplementationClass.class)
 public class CreateCampaignwithDate2Dupe extends BaseClassCRM{
 
-	@Test
+	@Test(groups = {"smoke","regression"})
+	
 	public void CreateCampaignDateTest() throws EncryptedDocumentException, IOException, InterruptedException {
-		ListnerImplementationClass.test.log(Status.INFO, "read data from excel");
+		//ListnerImplementationClass.test.log(Status.INFO, "read data from excel");
 		
 		
 		JavaUtility jutil=new JavaUtility();
@@ -39,12 +41,12 @@ public class CreateCampaignwithDate2Dupe extends BaseClassCRM{
 		
 		
 	   //click on Campaign button
-      UtilityClassObject.getTest().log(Status.INFO, "Navigate to Campaign");
+    //  UtilityClassObject.getTest().log(Status.INFO, "Navigate to Campaign");
 
 	   HomePage hp=new HomePage(driver);
 	   hp.clickonCampaignbtn();
 
-	   UtilityClassObject.getTest().log(Status.INFO, "Create Campaign");
+	 //  UtilityClassObject.getTest().log(Status.INFO, "Create Campaign");
 	   CampaignPage cp=new CampaignPage(driver);
 	   cp.enterCmpname(cname+r);
 	   cp.entertargetsize(targetsize);
@@ -55,12 +57,12 @@ public class CreateCampaignwithDate2Dupe extends BaseClassCRM{
 	   cp.getCdate().sendKeys(reqdate);;
 	   
 	   cp.clickOnCreateCampaignBtn();
-	   UtilityClassObject.getTest().log(Status.INFO, "Created Cpgn");
+	//   UtilityClassObject.getTest().log(Status.INFO, "Created Cpgn");
 
    Thread.sleep(5000);
 }
 
-	@Test
+	@Test(groups = "regression")
 	public void CreateCampaign() throws EncryptedDocumentException, IOException, InterruptedException {
 //	PropertyFileutility putil = new PropertyFileutility();
 //	putil.getDataFromPropertiesFile(null)
@@ -91,7 +93,7 @@ public class CreateCampaignwithDate2Dupe extends BaseClassCRM{
    Thread.sleep(5000);
 }
 	
-	@Test
+	@Test(groups = {"smoke","regression"})
 		public void createCampaignWithMandatoryFieldsTest() throws IOException, InterruptedException {
 
 		JavaUtility jutil=new JavaUtility();

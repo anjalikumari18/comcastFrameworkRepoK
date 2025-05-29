@@ -60,7 +60,7 @@ public class ListnerImplementationClass implements ITestListener, ISuiteListener
 	public void onTestStart(ITestResult result) {
 		String testCseName = result.getMethod().getMethodName();
 		Reporter.log(testCseName+ "Test case started");	
-		ExtentTest test=report.createTest(testCseName);
+		test=report.createTest(testCseName);
 		test.log(Status.INFO, result.getMethod().getMethodName()+"==>STARTED<==");
 	    //helps in executing parallel implementation
 		UtilityClassObject.setTest(test); //can use UCOBJ in real test case to access as it has been set
@@ -80,14 +80,14 @@ public class ListnerImplementationClass implements ITestListener, ISuiteListener
 		Reporter.log("Testcase failed");	
 		/*TakesScreenshot ts= (TakesScreenshot)BaseClassCRM.sdriver;
 		File temp = ts.getScreenshotAs(OutputType.FILE);*/
-		
+		test=report.createTest(testCseName);
 		TakesScreenshot ts=(TakesScreenshot)BaseClassCRM.sdriver;
 		String filepath = ts.getScreenshotAs(OutputType.BASE64);//cause extent report supports base64 & returns string
 
 		String time=new Date().toString().replace(" ", "_").replace(":", "_");
-		File dest=new File("./Errorshots/"+testCseName+".png");
+		//File dest=new File("./Errorshots/"+testCseName+".png");
 		test.addScreenCaptureFromBase64String(filepath, testCseName+"_"+time);
-
+		test.log(Status.FAIL , result.getMethod().getMethodName()+"==>STARTED<==");
 		/*try {
 			FileHandler.copy(temp, dest);
 		} catch (IOException e) {

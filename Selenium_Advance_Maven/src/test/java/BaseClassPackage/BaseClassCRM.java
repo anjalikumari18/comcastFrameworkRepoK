@@ -23,7 +23,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import GenericUtility.PropertyFileUtiltiy;
+//import GenericUtility.PropertyFileUtiltiy;
 import ObjRepo.HomePage;
 import ObjRepo.LoginPage;
 import generic.fileutility.PropertyFileutility;
@@ -74,16 +74,16 @@ public class BaseClassCRM {
 		Reporter.log("Post-condition");
 	}
 	
-	@Parameters("browser")
+	//@Parameters("browser")
 	@BeforeClass
-	public void configBC(String Brows) throws IOException {
+	public void configBC(/*String Brows*/) throws IOException {
 		Reporter.log("Launching a browser", true);
 
 		//CROSS BROWSER TESTING 
-		//String BROWSER = putil.getDataFromPropertiesFile("browser");
+		String BROWSER = putil.getDataFromPropertiesFile("browser");
 		String URL = putil.getDataFromPropertiesFile("url");
 
-		String BROWSER =Brows;
+		//String BROWSER =Brows;
 		if(BROWSER.equalsIgnoreCase("chrome")) {
 			driver=new ChromeDriver();
 		} else if (BROWSER.equalsIgnoreCase("firefox")) {

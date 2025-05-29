@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import BaseClassPackage.BaseClassCRM;
@@ -18,10 +19,10 @@ import generic.fileutility.ExcelUtility;
 import generic.fileutility.PropertyFileutility;
 import generic.webDriverUtility.JavaUtility;
 import generic.webDriverUtility.WebDriverUtility;
+//@Listeners(ListnerImplementationClass.class)
+public class CreateCampaignwithDateTest extends BaseClassCRM{
 
-public class CreateCampaignwithDate extends BaseClassCRM{
-
-	@Test
+	@Test(groups = "smoke")
 	public void CreateCampaignDateTest() throws EncryptedDocumentException, IOException, InterruptedException {
 		JavaUtility jutil=new JavaUtility();
 		int r = jutil.getRandomNumber();
@@ -49,7 +50,7 @@ public class CreateCampaignwithDate extends BaseClassCRM{
    Thread.sleep(5000);
 }
 
-	@Test
+	@Test(groups = {"smoke","regression"})
 	public void CreateCampaign() throws EncryptedDocumentException, IOException, InterruptedException {
 //	PropertyFileutility putil = new PropertyFileutility();
 //	putil.getDataFromPropertiesFile(null)
@@ -80,9 +81,11 @@ public class CreateCampaignwithDate extends BaseClassCRM{
    Thread.sleep(5000);
 }
 	
-	@Test
+	@Test(groups = "smoke")
 		public void createCampaignWithMandatoryFieldsTest() throws IOException, InterruptedException {
-
+		String expectedData="Anjali";
+		String actualData= "Kumari";
+		
 		JavaUtility jutil=new JavaUtility();
 		int r = jutil.getRandomNumber();
 		
@@ -107,6 +110,8 @@ public class CreateCampaignwithDate extends BaseClassCRM{
 	   
 	   cp.clickOnCreateCampaignBtn();
 	   Thread.sleep(5000);
+	   
+	   org.testng.Assert.assertEquals(actualData, expectedData, "Failed");
 	   }
 	}
 

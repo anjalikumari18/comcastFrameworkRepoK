@@ -1,65 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="0" failed="0" skipped="1">
+<testng-results ignored="1" total="6" passed="0" failed="5" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[Report config]]>
-    </line>
-    <line>
-      <![CDATA[Establish DB connection]]>
-    </line>
-    <line>
-      <![CDATA[Pre-condition]]>
-    </line>
-    <line>
-      <![CDATA[CreateCampaignDateTestTest case started]]>
-    </line>
-    <line>
-      <![CDATA[Testcase skipped]]>
-    </line>
-    <line>
-      <![CDATA[Post-condition]]>
-    </line>
-    <line>
-      <![CDATA[Disconnect DB connection]]>
-    </line>
   </reporter-output>
-  <suite started-at="2025-05-27T11:54:08 IST" name="Suite" finished-at="2025-05-27T11:54:08 IST" duration-ms="80">
+  <suite started-at="2025-05-28T10:39:42 IST" name="Suite" finished-at="2025-05-28T10:39:43 IST" duration-ms="990">
     <groups>
+      <group name="regression">
+        <method signature="CreateCampaignwithDate.CreateCampaign()[pri:0, instance:TestNG.CreateCampaignwithDate@5149d738]" name="CreateCampaign" class="TestNG.CreateCampaignwithDate"/>
+        <method signature="CreateCampaignwithDate2Dupe.CreateCampaignDateTest()[pri:0, instance:TestNG.CreateCampaignwithDate2Dupe@4c60d6e9]" name="CreateCampaignDateTest" class="TestNG.CreateCampaignwithDate2Dupe"/>
+        <method signature="CreateCampaignwithDate2Dupe.createCampaignWithMandatoryFieldsTest()[pri:0, instance:TestNG.CreateCampaignwithDate2Dupe@4c60d6e9]" name="createCampaignWithMandatoryFieldsTest" class="TestNG.CreateCampaignwithDate2Dupe"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="CreateCampaignwithDate.CreateCampaign()[pri:0, instance:TestNG.CreateCampaignwithDate@5149d738]" name="CreateCampaign" class="TestNG.CreateCampaignwithDate"/>
+        <method signature="CreateCampaignwithDate.CreateCampaignDateTest()[pri:0, instance:TestNG.CreateCampaignwithDate@5149d738]" name="CreateCampaignDateTest" class="TestNG.CreateCampaignwithDate"/>
+        <method signature="CreateCampaignwithDate.createCampaignWithMandatoryFieldsTest()[pri:0, instance:TestNG.CreateCampaignwithDate@5149d738]" name="createCampaignWithMandatoryFieldsTest" class="TestNG.CreateCampaignwithDate"/>
+        <method signature="CreateCampaignwithDate2Dupe.CreateCampaignDateTest()[pri:0, instance:TestNG.CreateCampaignwithDate2Dupe@4c60d6e9]" name="CreateCampaignDateTest" class="TestNG.CreateCampaignwithDate2Dupe"/>
+        <method signature="CreateCampaignwithDate2Dupe.createCampaignWithMandatoryFieldsTest()[pri:0, instance:TestNG.CreateCampaignwithDate2Dupe@4c60d6e9]" name="createCampaignWithMandatoryFieldsTest" class="TestNG.CreateCampaignwithDate2Dupe"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-05-27T11:54:08 IST" name="Test" finished-at="2025-05-27T11:54:08 IST" duration-ms="80">
-      <class name="TestNG.CreateCampaignwithDate2Dupe">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:TestNG.CreateCampaignwithDate2Dupe@183ec003]" started-at="2025-05-27T11:54:08 IST" name="configBS" finished-at="2025-05-27T11:54:08 IST" duration-ms="13" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Establish DB connection]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- configBS -->
-        <test-method is-config="true" signature="configBT()[pri:0, instance:TestNG.CreateCampaignwithDate2Dupe@183ec003]" started-at="2025-05-27T11:54:08 IST" name="configBT" finished-at="2025-05-27T11:54:08 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Pre-condition]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- configBT -->
-        <test-method is-config="true" signature="configBC(java.lang.String)[pri:0, instance:TestNG.CreateCampaignwithDate2Dupe@183ec003]" started-at="2025-05-27T11:54:08 IST" name="configBC" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1748327048841" status="FAIL">
-          <exception class="org.testng.TestNGException">
+    <test started-at="2025-05-28T10:39:42 IST" name="Test" finished-at="2025-05-28T10:39:43 IST" duration-ms="990">
+      <class name="TestNG.CreateCampaignwithDate">
+        <test-method signature="CreateCampaign()[pri:0, instance:TestNG.CreateCampaignwithDate@5149d738]" started-at="2025-05-28T10:39:42 IST" name="CreateCampaign" finished-at="2025-05-28T10:39:43 IST" duration-ms="620" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
-in C:\Users\anjal\eclipse-workspace\Framework\Selenium_Advance_Maven\tListnerplusextentreport.xml]]>
+              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
-in C:\Users\anjal\eclipse-workspace\Framework\Selenium_Advance_Maven\tListnerplusextentreport.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:264)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
-at org.testng.internal.Parameters.createParameters(Parameters.java:690)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+at ObjRepo.HomePage.clickonCampaignbtn(HomePage.java:78)
+at TestNG.CreateCampaignwithDate.CreateCampaign(CreateCampaignwithDate.java:69)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:741)
 at org.testng.TestRunner.run(TestRunner.java:616)
@@ -78,32 +61,34 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- configBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:TestNG.CreateCampaignwithDate2Dupe@183ec003]" started-at="2025-05-27T11:54:08 IST" name="configBM" finished-at="2025-05-27T11:54:08 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- configBM -->
-        <test-method signature="CreateCampaignDateTest()[pri:0, instance:TestNG.CreateCampaignwithDate2Dupe@183ec003]" started-at="2025-05-27T11:54:08 IST" name="CreateCampaignDateTest" finished-at="2025-05-27T11:54:08 IST" duration-ms="0" status="SKIP">
-          <exception class="org.testng.TestNGException">
+        </test-method> <!-- CreateCampaign -->
+        <test-method signature="CreateCampaignDateTest()[pri:0, instance:TestNG.CreateCampaignwithDate@5149d738]" started-at="2025-05-28T10:39:43 IST" name="CreateCampaignDateTest" finished-at="2025-05-28T10:39:43 IST" duration-ms="77" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
-in C:\Users\anjal\eclipse-workspace\Framework\Selenium_Advance_Maven\tListnerplusextentreport.xml]]>
+              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
-in C:\Users\anjal\eclipse-workspace\Framework\Selenium_Advance_Maven\tListnerplusextentreport.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:264)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
-at org.testng.internal.Parameters.createParameters(Parameters.java:690)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+at ObjRepo.HomePage.clickonCampaignbtn(HomePage.java:78)
+at TestNG.CreateCampaignwithDate.CreateCampaignDateTest(CreateCampaignwithDate.java:38)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:741)
 at org.testng.TestRunner.run(TestRunner.java:616)
@@ -122,35 +107,150 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
-            <line>
-              <![CDATA[Testcase skipped]]>
-            </line>
           </reporter-output>
         </test-method> <!-- CreateCampaignDateTest -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:TestNG.CreateCampaignwithDate2Dupe@183ec003]" started-at="2025-05-27T11:54:08 IST" name="configAM" finished-at="2025-05-27T11:54:08 IST" duration-ms="0" status="SKIP">
+        <test-method signature="createCampaignWithMandatoryFieldsTest()[pri:0, instance:TestNG.CreateCampaignwithDate@5149d738]" started-at="2025-05-28T10:39:43 IST" name="createCampaignWithMandatoryFieldsTest" finished-at="2025-05-28T10:39:43 IST" duration-ms="82" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+at ObjRepo.HomePage.clickonCampaignbtn(HomePage.java:78)
+at TestNG.CreateCampaignwithDate.createCampaignWithMandatoryFieldsTest(CreateCampaignwithDate.java:100)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:TestNG.CreateCampaignwithDate2Dupe@183ec003]" started-at="2025-05-27T11:54:08 IST" name="configAC" finished-at="2025-05-27T11:54:08 IST" duration-ms="0" status="SKIP">
+        </test-method> <!-- createCampaignWithMandatoryFieldsTest -->
+      </class> <!-- TestNG.CreateCampaignwithDate -->
+      <class name="TestNG.CreateCampaignwithDate2Dupe">
+        <test-method signature="CreateCampaignDateTest()[pri:0, instance:TestNG.CreateCampaignwithDate2Dupe@4c60d6e9]" started-at="2025-05-28T10:39:43 IST" name="CreateCampaignDateTest" finished-at="2025-05-28T10:39:43 IST" duration-ms="77" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+at ObjRepo.HomePage.clickonCampaignbtn(HomePage.java:78)
+at TestNG.CreateCampaignwithDate2Dupe.CreateCampaignDateTest(CreateCampaignwithDate2Dupe.java:47)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAT()[pri:0, instance:TestNG.CreateCampaignwithDate2Dupe@183ec003]" started-at="2025-05-27T11:54:08 IST" name="configAT" finished-at="2025-05-27T11:54:08 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- CreateCampaignDateTest -->
+        <test-method signature="createCampaignWithMandatoryFieldsTest()[pri:0, instance:TestNG.CreateCampaignwithDate2Dupe@4c60d6e9]" started-at="2025-05-28T10:39:43 IST" name="createCampaignWithMandatoryFieldsTest" finished-at="2025-05-28T10:39:43 IST" duration-ms="60" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+at ObjRepo.HomePage.clickonCampaignbtn(HomePage.java:78)
+at TestNG.CreateCampaignwithDate2Dupe.createCampaignWithMandatoryFieldsTest(CreateCampaignwithDate2Dupe.java:110)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
-            <line>
-              <![CDATA[Post-condition]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- configAT -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:TestNG.CreateCampaignwithDate2Dupe@183ec003]" started-at="2025-05-27T11:54:08 IST" name="configAS" finished-at="2025-05-27T11:54:09 IST" duration-ms="354" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Disconnect DB connection]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- configAS -->
+        </test-method> <!-- createCampaignWithMandatoryFieldsTest -->
       </class> <!-- TestNG.CreateCampaignwithDate2Dupe -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
